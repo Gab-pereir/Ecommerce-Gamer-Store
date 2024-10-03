@@ -7,6 +7,7 @@ const urlBase = 'http://localhost:3005'
 export default function useProdutos() {
     const [produtos, setProdutos] = useState<Produto[]>([])
 
+    
     async function obterProdutos(): Promise<Produto[]> {
         const resp = await fetch(`${urlBase}/produtos`)
         const produtos = await resp.json()
